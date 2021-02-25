@@ -1,0 +1,9 @@
+"""Practice Problem 3/Number 2
+def getGuessedWord(secretWord, lettersGuessed):
+    result = ''
+    for i in secretWord:
+        if i in lettersGuessed:
+            result += i
+        else:
+            result += '_'
+    return result
