@@ -1,4 +1,4 @@
-"""Practice Problem 3/Number 2
+"""Practice Problem 3/Number 2"""
 def getGuessedWord(secretWord, lettersGuessed):
     result = ''
     for i in secretWord:
@@ -7,3 +7,19 @@ def getGuessedWord(secretWord, lettersGuessed):
         else:
             result += '_ '
     return result
+
+"""Practice problem 3/Number 3"""
+def getAvailableLetters(lettersGuessed):
+    
+    alphabetic = 'abcdefghijklmnopqrstuvwxyz'
+    javab =''
+    alist = list(alphabetic)
+    blist = alist[:]
+    for i in blist :
+        if i not in lettersGuessed:
+            javab += i
+        else:
+            alist.remove(i)
+    return ''.join(javab)
+getAvailableLetters(['e', 'i', 'k', 'p', 'r', 's'])
+Out[23]: 'abcdfghjlmnoqtuvwxyz'
